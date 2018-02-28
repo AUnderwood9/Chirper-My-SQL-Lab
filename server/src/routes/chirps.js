@@ -84,7 +84,7 @@ router.post("/", (req, res, next) => {
         })
         .then((result) => {
             console.log("post chirp", result);
-            return chirpstore.PostChirp(result, chirpObject.chirpToAdd, chirpObject.location)
+            return chirpstore.PostChirp(chirpObject.userId, chirpObject.chirpToAdd, chirpObject.location)
             .then((response) => {
                 return response;
             })
